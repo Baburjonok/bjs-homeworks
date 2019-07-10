@@ -6,8 +6,14 @@ function initCheckBirthday() {
     document.getElementById('disclaimer').innerHTML = result;   
 }
 
-function checkBirthday(birthday) {
-    // код для задачи №1 писать здесь
+function checkBirthday(birthday) {  // код для задачи №1 писать здесь
+    let now = +(new Date());
+    birthday = +(new Date(birthday));
+    let diff = now - birthday;
+    age = diff / ((365 * 86400000 * 4 + 86400000) / 4);
+        if (age > 18) {
+        return result = age;
+        };
 }
 
 function initPrintAnimalSound() {
@@ -20,8 +26,13 @@ function initPrintAnimalSound() {
     document.getElementById('sound').innerHTML = result;   
 }
 
-function getAnimalSound(animal) {
-    // код для задачи №2 писать здесь
+function getAnimalSound(animal) {  // код для задачи №2 писать здесь
+    sound = animal.sound;
+    if (animal === undefined) {
+        return null;
+    } else {
+        return sound;
+    };    
 }
 
 function initCalculateStatement() {
@@ -34,6 +45,17 @@ function initCalculateStatement() {
     }
 }
 
-function getAverageMark(marks) {
-    // код для задачи №3 писать здесь
+function getAverageMark(marks) {   // код для задачи №3 писать здесь
+    let sum = 0;
+    for (let i=0; i < marks.length; i++) {
+        sum = parseInt(sum);
+        marks[i] = parseInt(marks[i]);
+        sum = sum + marks[i];
+    };
+    let average = sum / marks.length;
+
+    let roundedAverage = Math.round(sum / marks.length);
+
+    return roundedAverage;
 }
+
