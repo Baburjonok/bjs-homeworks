@@ -63,61 +63,92 @@ console.log(arm.getDamage()); // 1*/
 
 
 class Bow extends Weapon {   //Задание 2
+  constructor(name, attack, durability, range) {
+    super();
+    this.name = "Лук";
+    this.attack = 10;
+    this.durability = 200;
+    this.range = 3;
+  }
 }
 
 class Sword extends Weapon {
+  constructor(name, attack, durability, range) {
+    super();
+    this.name = "Меч";
+    this.attack = 25;
+    this.durability = 500;
+    this.range = 1;
+  }
 }
 
 class Stick extends Weapon {
+  constructor(name, attack, durability, range) {
+    super();
+    this.name = "Посох";
+    this.attack = 8;
+    this.durability = 300;
+    this.range = 2;
+  }
 }
 
 class LongBow extends Bow {
+  constructor(name, attack, durability, range) {
+    super(durability);
+    this.name = "Длинный лук";
+    this.attack = 15;
+    this.range = 4;
+  }
 }
 
 class Poleaxe extends Sword {
+  constructor(name, attack, durability, range) {
+    super(range);
+    this.name = "Секира";
+    this.attack = 27;
+    this.durability = 800;
+  }
 }
 
 class StickOfStorm extends Stick {
+  constructor(name, attack, durability, range) {
+    super(durability);
+    this.name = "Посох Бури";
+    this.attack = 10;
+    this.range = 3;
+  }
 }
 
-const bowSecond = new Bow("Лук", 10, 200, 3);
-const swordSecond = new Sword("Меч", 25, 500, 1);
-const stickSecond = new Stick("Посох", 8, 300, 2);
-const longBowSecond = new Bow ("Длинный лук", 15, bow.durability, 4);
-const poleaxeSecond = new Sword ("Секира", 27, 800, sword.range);
 
+/*const bowSecond = new Bow();
+console.log(bowSecond.name); //Лук
+console.log(bowSecond.attack); //10
+console.log(bowSecond.durability);  //200
+console.log(bowSecond.range);  //3
+bowSecond.takeDamage(30);
+console.log(bowSecond.durability);  //170
+console.log(bowSecond.getDamage());  //10 
+console.log(bowSecond.isBroken());  //false
 
-
-/*bowSecond.takeDamage(30);
-console.log(bowSecond.durability);
-console.log(bowSecond.getDamage()); 
-console.log(bowSecond.isBroken());
-
-swordSecond.takeDamage(30);
-console.log(swordSecond.durability);
-console.log(swordSecond.getDamage()); 
-console.log(swordSecond.isBroken());
-
-stickSecond.takeDamage(30);
-console.log(stickSecond.durability);
-console.log(stickSecond.getDamage()); 
-console.log(stickSecond.isBroken());
-
+const longBowSecond = new LongBow();
+console.log(longBowSecond.name); //Длинный лук
+console.log(longBowSecond.attack); //15
+console.log(longBowSecond.durability);  //200
+console.log(longBowSecond.range);  //4
 longBowSecond.takeDamage(30);
-console.log(longBowSecond.durability);
-console.log(longBowSecond.getDamage()); 
-console.log(longBowSecond.isBroken());
+console.log(longBowSecond.durability);  //170
+console.log(longBowSecond.getDamage());  //15 
+console.log(longBowSecond.isBroken());  //false
 
-poleaxeSecond.takeDamage(30);
-console.log(poleaxeSecond.durability);
-console.log(poleaxeSecond.getDamage()); 
-console.log(poleaxeSecond.isBroken());
-
-console.log(bowSecond.name); // Лук
-console.log(bowSecond.attack); // 10
-console.log(bowSecond.durability); // 200
-console.log(bowSecond.range); // 3*/
-
+const swordSecond = new Sword();
+console.log(swordSecond.name);  //Меч
+console.log(swordSecond.attack); //25
+console.log(swordSecond.durability);  //500
+console.log(swordSecond.range);  //1
+swordSecond.takeDamage(30);
+console.log(swordSecond.durability);  //470
+console.log(swordSecond.getDamage());  //25 
+console.log(swordSecond.isBroken());  //false*/
 
 
 class StudentLog {     //Задание 3
